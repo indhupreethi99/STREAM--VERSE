@@ -2,29 +2,40 @@
  
  const movies = [
   {
-    title: "Leo",
-    genre: "Action",
-    year: 2023,
-    image: ""
+    title: "Ratsasan",
+    genre: "thriller",
+    year: 2018,
+    image:"../priya/thriller6.jpg"
+
   },
   {
-    title: "Jailer",
+    title: "naan",
     genre: "Action",
     year: 2023,
-    image: ""
+    image:"../priya/thriller__1.jpg"
+
   },
   {
-    title: "96",
+    title: "the wolf and the goat",
     genre: "Drama",
     year: 2018,
-    image: ""
+    image:"../priya/thriller2.jpg"
   },
   {
-    title: "Love Today",
+    title: "dridam",
     genre: "Comedy",
     year: 2022,
-    image: ""
-  }
+    image: "../priya/thriller3.jpg"
+
+  },
+{
+    title: "sookshma dharshini",
+    genre: "Comedy",
+    year: 2022,
+    image: "../priya/thriller4.jpg"
+
+  },
+
 ];
 
 const searchInput = document.getElementById("searchInput");
@@ -74,7 +85,7 @@ function displayMovies(movieList) {
 
           <!-- Priyadharshini details page file name vandha href maathu -->
           <a
-            href="movie-details.html"
+            href="../HTML/movie.html"
             class="inline-block mt-3 text-red-400 hover:text-red-500 font-medium"
           >
             View Details
