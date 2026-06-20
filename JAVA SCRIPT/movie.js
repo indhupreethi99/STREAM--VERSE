@@ -313,3 +313,18 @@ leftH.addEventListener("click", function () {
     `translateX(-${horrorMove}px)`;
 
 });
+//for the banner click//
+let playBtn = document.getElementById("playBtn");
+
+const bannerMovies = [
+    "ohmy",      // banner1.jpg
+    "hi",   // hi.jpg
+    "sita",   // banner3.jpg
+    "amaran",   // banner4.jpg
+    "irugapatru"     // banner5.jpg
+];
+
+playBtn.addEventListener("click", function () {
+    window.location.href =
+        `movie-details.html?id=${bannerMovies[current]}`;
+});

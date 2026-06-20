@@ -20,7 +20,7 @@ body {
 }
 
 .header__head {
-    color: rgb(225, 218, 218);
+    color: rgb(228, 15, 15);
 }
 
 .main {
@@ -454,8 +454,15 @@ body {
 
 /* TABLET RESPONSIVE */
 
+/* ==========================================
+   TABLET RESPONSIVE (max-width: 1024px)
+   ========================================== */
 @media screen and (max-width: 1024px){
-    
+    /* Ensure rows don't stretch past the screen width */
+    .th, .family__movies, .love__movies, .enta__movies, .feel__movies, .horror__movies {
+        width: 100%;
+    }
+
     .main img{
         width:100%;
         height:350px;
@@ -504,9 +511,14 @@ body {
 }
 
 
-/*  MOBILE RESPONSIVE */
-
+/* ==========================================
+   MOBILE RESPONSIVE (max-width: 768px)
+   ========================================== */
 @media screen and (max-width: 768px){
+    /* Prevent containers from spilling over */
+    .th, .family__movies, .love__movies, .enta__movies, .feel__movies, .horror__movies {
+        width: 100%;
+    }
 
     .header__head{
         text-align:center;
@@ -597,10 +609,10 @@ body {
 }
 
 
-/*SMALL MOBILE */
-
+/* ==========================================
+   SMALL MOBILE (max-width: 480px)
+   ========================================== */
 @media screen and (max-width: 480px){
-
     .main img{
         height:220px;
     }

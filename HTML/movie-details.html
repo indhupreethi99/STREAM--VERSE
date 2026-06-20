@@ -1,0 +1,1428 @@
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamVerse - Premium Details🎞️</title>
+    <!-- Font links matching your theme -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            font-family: "Inter", sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Hero Backdrop Wall */
+        .ambient-hero {
+            position: relative;
+            width: 100%;
+            min-height: 70vh;
+            padding: 40px 60px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(11, 11, 11, 0.3) 0%, #0b0b0b 100%), 
+                        linear-gradient(to right, #0b0b0b 35%, rgba(11,11,11,0.5) 100%);
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        /* Dynamic Blurred Background Blur Mirror effect */
+        .bg-blur-mirror {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.25;
+            filter: blur(40px);
+        }
+
+        /* Floating Minimal Navigation Header */
+        .floating-header {
+            position: absolute;
+            top: 30px;
+            left: 60px;
+            right: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+        .brand-logo {
+            color: rgb(228, 15, 15);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .back-pill {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s ease;
+        }
+        .back-pill:hover {
+            background: rgb(228, 15, 15);
+            border-color: rgb(228, 15, 15);
+            box-shadow: 0 4px 15px rgba(228, 15, 15, 0.4);
+        }
+
+        /* Main Theater Content Panel Grid */
+        .theater-grid {
+            width: 100%;
+            max-width: 1400px;
+            margin: 40px auto 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .meta-title-block {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .movie-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .meta-pills {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .pill-badge {
+            background: rgba(228, 15, 15, 0.15);
+            border: 1px solid rgba(228, 15, 15, 0.4);
+            color: #ff4d4d;
+            padding: 4px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .pill-badge.year {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+        }
+        .story-paragraph {
+            color: #bbb;
+            font-size: 1.05rem;
+            line-height: 2;
+            margin-top: 10px;
+        }
+
+        /* 16:9 Premium Video Layout Frame */
+        .video-viewport {
+            width: 100%;
+            background: #000;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            border: 1px solid #222;
+        }
+        .video-ratio-box {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        .video-ratio-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Bottom Details Shelf Container */
+        .details-shelf {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 50px 60px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 60px;
+        }
+        .poster-column img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #222;
+        }
+        .shelf-header {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.5px;
+            position: relative;
+            display: inline-block;
+        }
+        .shelf-header::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 210px;
+            height: 2px;
+            background: rgb(228, 15, 15);
+        }
+        .cast-box {
+            background: #111;
+            border: 1px solid #1c1c1c;
+            padding: 25px;
+            border-radius: 12px;
+            color: #ddd;
+            font-size: 1.05rem;
+            line-height: 1.5;
+        }
+
+        /* Dynamic Recommendations Grid Area */
+        .recommendations-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 60px 80px 60px;
+        }
+        .recom-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .recom-card {
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .recom-card:hover {
+            transform: translateY(-8px);
+        }
+        .recom-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            margin-bottom: 10px;
+            border: 1px solid #1c1c1c;
+        }
+        .recom-card h4 {
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-align: center;
+            color: #eee;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .theater-grid { grid-template-columns: 1fr; gap: 30px; }
+            .details-shelf { grid-template-columns: 1fr; gap: 40px; }
+            .poster-column { display: none; } /* Hide duplicate poster layout row on smaller viewports */
+            .ambient-hero { padding: 120px 30px 40px 30px; }
+            .floating-header { left: 30px; right: 30px; }
+            .details-shelf, .recommendations-wrapper { padding-left: 30px; padding-right: 30px; }
+            .movie-title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ambient Cinematic Showcase Area -->
+    <div class="ambient-hero">
+        <!-- Dynamic blurred overlay filter graphic -->
+        <img id="bgBlur" class="bg-blur-mirror" src="../priya/banner3.jpg" alt="">
+
+        <!-- Floating Navbar Header -->
+        <div class="floating-header">
+            <div class="brand-logo">StreamVerse</div>
+            <a href="javascript:history.back()" class="back-pill">
+                <i class="fa-solid fa-arrow-left"></i> Back to home
+            </a>
+        </div>
+
+        <!-- Upper Screen Splitter Theater Panel -->
+        <div class="theater-grid">
+            <div class="meta-title-block">
+                <div class="meta-pills">
+                    <span id="movieGenre" class="pill-badge">Genre</span>
+                    <span id="movieYear" class="pill-badge year">Year</span>
+                </div>
+                <h1 id="movieTitle" class="movie-title">Movie Title</h1>
+                <p id="movieStory" class="story-paragraph">Loading narrative description structure details summary...</p>
+            </div>
+
+            <!-- Dynamic Media Viewport Frame -->
+            <div class="video-viewport">
+                <div class="video-ratio-box">
+                    <iframe id="movieTrailer" src="" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lower Content Shelf Row Panels -->
+    <div class="details-shelf">
+        <div class="poster-column">
+            <h3 class="shelf-header">Key Artwork</h3>
+            <img id="moviePoster" src="" alt="Poster View">
+        </div>
+        <div>
+            <h3 class="shelf-header">Starring Cast & Crew</h3>
+            <div id="movieCast" class="cast-box">Loading actor credits...</div>
+        </div>
+    </div>
+
+    <!-- Recommendations Carousel Container Grid Shelf -->
+    <div class="recommendations-wrapper">
+        <h3 class="shelf-header">You May Also Like</h3>
+        <div id="likeGrid" class="recom-grid"></div>
+    </div>
+
+    <!-- Dynamic System Handling Database Code Script -->
+    <script>
+        const moviesData = {
+            // === THRILLER MOVIES ROW ===
+    "naan": {
+        title: "Naan",
+        poster: "../priya/thriller__1.jpg",
+        genre: "Psychological Thriller",
+        category: "thriller",
+        year: "2012",
+        story: "An orphan student assumes a dead classmate's identity to secure a medical school admission, only to find himself trapped in a dangerous web of crimes and secrets to protect his stolen life.",
+        cast: "Vijay Antony, Siddharth Venugopal, Rupa Manjari, Vijay Victor",
+        trailer: "https://www.youtube.com/embed/AcuqzxS-0VM?si=3kloYnqP03xE2dz8"
+    },
+    "ratsasan": {
+            title: "Ratsasan",
+            poster: "../priya/thriller2.jpg",
+            genre: "Crime Thriller",
+            category: "thriller",
+            year: "2018",
+            story: "An aspiring film director turns into a police officer and finds himself pursuing a ruthless, stealthy serial killer targeting innocent schoolgirls by decoding complex psychological profiles.",
+            cast: "Vishnu Vishal, Amala Paul, Saravanan, Ramdoss",
+           
+            trailer: "https://www.youtube.com/embed/6adtIuXDCBo?si=1T5gTLHFdlc_dgun"  
+        },
+    "thewolf": {
+        title: "The Wolf and the Goat",
+        poster: "../priya/thriller3.avif",
+        genre: "Mystery Thriller",
+        category: "thriller",
+        year: "2024",
+        story: "A gripping suspense tale exploring a tense cat-and-mouse chase where moral boundaries blur, forcing a desperate survival situation between an apex predator and target.",
+        cast: "Mysskin , Sri ,Shaji ,Chen, YuvaBharathiraja, ",
+        trailer: "https://www.youtube.com/embed/zpbfh3_wfhg?si=GXA4J67wakhdMZ4k"
+    },
+    "dridam": {
+        title: "Dridam",
+        poster: "../priya/thriller4.jpg",
+        genre: "Suspense Thriller",
+        category: "thriller",
+        year: "2023",
+        story: "An intense investigative journey where a seasoned professional uncovers an intricate corporate tracking scam, putting their own life on the line to piece together the truth.",
+        cast: "Dridam stars Shane Nigam, Saniya Fathima, Shobi Thilakan, Dinesh Prabhakar and Krishna Prabha in pivotal roles. The film is directed by Martin Joseph, with music composed by Sreerag Saji and cinematography by P. M. Unnikrishnan.",
+        trailer: "https://www.youtube.com/embed/zY7w55Bcd3s?si=g6f0oR7B5sEGOEO1"
+    },
+    "sookshma": {
+        title: "Sookshma Darshini",
+        poster: "../priya/thriller5.webp",
+        genre: "Mystery Thriller",
+        category: "thriller",
+        year: "2024",
+        story: "When an observant individual notices subtle anomalies in their quiet neighborhood, it exposes a massive concealed conspiracy hiding in plain sight.",
+        cast: "Sookshmadarshini stars Nazriya Nazim, Basil Joseph, Akhila Bhargavan, Merin Philip, Deepak Parambol, Pooja Mohanraj and Sidharth Bharathan in key roles. The film is directed by M. C. Jithin and written by Libin T. B. and Athul Ramachandran. Produced by A. V. Anoop, Shyju Khalid and Sameer Thahir, the film features cinematography by Sharan Velayudhan Nair, editing by Chaman Chakko and music composed by Christo Xavier.",
+        trailer: "https://www.youtube.com/embed/upohlfTPDYg?si=4kxI3_3v20AMJiWK"
+    },
+    "vada": {
+        title: "Vada Chennai",
+        poster: "../priya/thriller6.jpg",
+        genre: "Action / Crime Thriller",
+        category: "thriller",
+        year: "2018",
+        story: "A talented young carrom player is reluctantly pulled into a treacherous gang war brewing in North Chennai, permanently reshaping his life and allegiances.",
+        cast: "Dhanush, Ameer, Radha Ravi, Daniel Balaji, Andrea Jeremiah",
+        trailer: "https://www.youtube.com/embed/q5GG5HJ1hVk?si=nD_LQU18hUw_yUq-" 
+    },
+    "sathuranga": {
+        title: "Sathuranga Vettai",
+        poster: "../priya/thriller7.jpg",
+        genre: "Con Crime Thriller",
+        category: "thriller",
+        year: "2014",
+        story: "A master conman utilizes brilliant scams and psychological manipulation to swindle wealthy elite targets, until a high-stakes deal goes dangerously wrong.",
+        cast: "Natraj, Ishara Nair, Ponvannan, Ilavarasu",
+        trailer: "https://www.youtube.com/embed/gOVchxz7z4s?si=f-TKrsMwDXTrw_zo"
+    },
+    "thani": {
+        title: "Thani Oruvan",
+        poster: "../priya/thriller8.webp",
+        genre: "Action / Psychological Thriller",
+        category: "thriller",
+        year: "2015",
+        story: "An ideological IPS officer is determined to expose and take down an exceptionally intelligent, wealthy medical tycoon who controls a hidden criminal empire.",
+        cast: "Jayam Ravi, Arvind Swamy, Nayanthara, Thambi Ramaiah",
+        trailer: "https://www.youtube.com/embed/r5Lih8rKd6k?si=EuI-6iR2z2j74bP9"
+    },
+    "diary": {
+        title: "Diary",
+        poster: "../priya/thriller9.jpg",
+        genre: "Supernatural Thriller",
+        category: "thriller",
+        year: "2022",
+        story: "A sub-inspector trainee takes on an unsolved 16-year-old case involving a mysterious route bus, unlocking chilling secrets that challenge logical explanations.",
+        cast: "Arulnithi, Pavithra Marimuthu, Shah Ra",
+        trailer: "https://www.youtube.com/embed/9ZmSm0anYq8?si=EU9-Sp0m0zTOrd8g"
+    },
+    "ghajini": {
+        title: "Ghajini",
+        poster: "../priya/thriller10.jpg",
+        genre: "Action Thriller",
+        category: "thriller",
+        year: "2005",
+        story: "A wealthy businessman suffering from anterograde amnesia uses tattoos and photographs to track down the violent gang responsible for his lover's death.",
+        cast: "Suriya, Asin, Nayanthara, Pradeep Rawat",
+        trailer: "https://www.youtube.com/embed/tlvrGfHbPsw?si=cK_xAlTeFf3s4adZ"
+    },
+    "mankatha": {
+        title: "Mankatha",
+        poster: "../priya/thriller11.avif",
+        genre: "Action / Heist Thriller",
+        category: "thriller",
+        year: "2011",
+        story: "A suspended, corrupt police officer joins a rogue group of young men planning to steal 500 million rupees of illegal betting money during the cricket season.",
+        cast: "Ajith Kumar, Arjun Sarja, Trisha Krishnan, Vaibhav",
+        trailer: "https://www.youtube.com/embed/vHESM8iR1JE?si=-vtvZfyKhj93NDdM"
+    },
+    "theeran": {
+        title: "Theeran Adhigaram Ondru",
+        poster: "../priya/thriller12.jpg",
+        genre: "Action / Crime Thriller",
+        category: "thriller",
+        year: "2017",
+        story: "Based on real police operations, an uncompromising police officer leads a dangerous multi-state manhunt to intercept a ruthless gang of organized dacoits.",
+        cast: "Karthi, Rakul Preet Singh, Abhimanyu Singh",
+        trailer: "https://www.youtube.com/embed/BOIJH4viS7w?si=YOMlnD9bsa9L-2v9"
+    },
+    "Ykaithi": { // Fixed case matching your href="movie-details.html?id=Ykaithi"
+        title: "Kaithi",
+        poster: "../priya/thriller13.jpg",
+        genre: "Action Thriller",
+        category: "thriller",
+        year: "2019",
+        story: "A recently released prisoner seeking to meet his daughter is forced to drive an unconscious truck full of poisoned officers out of a dangerous ambush zone.",
+        cast: "Karthi, Narain, Arjun Das, George Maryan",
+        trailer: "https://www.youtube.com/embed/LKkvreg47BU?si=tq9YGk9O5dKKSJRZ"
+    },
+    "thadam": {
+        title: "Thadam",
+        poster: "../priya/thriller14.avif",
+        genre: "Crime / Murder Mystery",
+        category: "thriller",
+        year: "2019",
+        story: "During a complex murder investigation, police arrest a suspect only to find out he has an identical twin brother, sparking a complicated legal deadlock.",
+        cast: "Arun Vijay, Tanya Hope, Smruthi Venkat",
+        trailer: "https://www.youtube.com/embed/I4gIzCPYupk?si=zV_5wzC2FsWiDW9-"
+    },
+    "kishkindha": {
+        title: "Kishkindha Kaandam",
+        poster: "../priya/thriller15.jpg",
+        genre: "Mystery Thriller",
+        category: "thriller",
+        year: "2024",
+        story: "Set in a forest-dense monkey sanctuary community, an unusual series of disappearances pushes an eccentric family to confront dark historical secrets.",
+        cast: "Asif Ali, Vijayaraghavan, Aparna Balamurali",
+        trailer: "https://www.youtube.com/embed/6jR7lL-o7js?si=JoiO_idvesr-HOu_"
+    },
+    "sambhavam": {
+        title: "Sambhavam",
+        poster: "../priya/thriller16.jpg",
+        genre: "Suspense Thriller",
+        category: "thriller",
+        year: "2024",
+        story: "An unexpected event turns an ordinary night into a frantic gridlock of puzzle pieces where characters try desperately to hide incriminating evidence.",
+        cast: "Starring Askar Ali, Vineeth Kumar, Assim Jamal, Sidharth Bharathan, Senthil Krishna, Neethu Krishna and Gouri Vineeth. The film is written and directed by Jithu Satheesan Mangalathu, produced by Faras Mohammed, Fahad Sidheekh and Fayez Mohammed. Music is composed by Godwin Thomas, cinematography by Naveen Najose and editing by Arjun Prakash ",
+
+        trailer: "https://www.youtube.com/embed/TcyR-qhZsiM?si=-i4ptbm4YAZ7u40B"
+    },
+    "lift": {
+        title: "Lift",
+        poster: "../priya/thriller17.jpg",
+        genre: "Tech / Horror Thriller",
+        category: "thriller",
+        year: "2021",
+        story: "An IT professional and his colleague get trapped late at night inside their corporate office tower as a malevolent supernatural force targets them inside a lift grid.",
+        cast: "Kavin, Amritha Aiyer, Balaji Venugopal",
+        trailer: "whttps://www.youtube.com/embed/Auh3-2JnZcc?si=xWs2i4ZXZvdccE-Y" 
+    },
+    "dhurandar": {
+        title: "Dhurandhar",
+        poster: "../priya/thriller18.jpg",
+        genre: "Action Thriller",
+        category: "thriller",
+        year: "2023",
+        story: "A rogue operative with unparalleled tactical combat skills returns from the shadows to clear their name after being framed for an international security leak.",
+        cast: "Cast: Ranveer Singh, Akshaye Khanna, Sanjay Dutt, Arjun Rampal, R. Madhavan, Sara Arjun, Rakesh Bedi, Danish Pandor, Manav Gohil and Gaurav Gera. Crew: Directed and written by Aditya Dhar, produced by Jyoti Deshpande, Aditya Dhar and Lokesh Dhar, with music composed by Shashwat Sachdev, cinematography by Vikash Nowlakha and editing by Shivkumar V. Panicker.",
+        trailer: "https://www.youtube.com/embed/qfQ4-suh4Pk?si=lWBFod4_Yi-x3xWt"
+    },
+    // FAMILY MOVIES ROW 
+    "tourist": {
+        title: "Tourist Family",
+        poster: "../priya/fam1.jpg",
+        genre: "Family Drama",
+        category: "family",
+        year: "2024",
+        story: "A delightful family outing turns into an unexpected journey of bonding, laughter, and uncovering hidden relationships across generations.",
+        cast: "Tourist Family stars M. Sasikumar, Simran, Mithun Jai Sankar, Kamalesh, Yogi Babu, M. S. Bhaskar and Ramesh Thilak. The film is directed by Abishan Jeevinth, produced by Yuvaraj Ganesan, with music composed by Sean Roldan, cinematography by Aravind Viswanathan and editing by Barath Vikraman.",
+        trailer: "https://www.youtube.com/embed/VtcS-7EWJ4s?si=XDOXerfooALzLSlF"
+    },
+    "kudumbasthan": {
+        title: "Kudumbasthan",
+        poster: "../priya/fam2.webp",
+        genre: "Family Drama",
+        category: "family",
+        year: "2024",
+        story: "A heartwarming narrative centered around a dedicated family man navigating modern societal pressures while trying to keep his household anchored in traditional values.",
+        cast: "Kudumbasthan stars K. Manikandan, Saanve Meghana, Guru Somasundaram, R. Sundarrajan, Nivedita Rajappan, Balaji Sakthivel, Prasanna Balachandran and Jenson Dhivakar. The film is directed by Rajeshwar Kalisamy, with music composed by Vaisagh, cinematography by Sujith N. Subramaniam and editing by Kannan Balu.",
+        trailer: "https://www.youtube.com/embed/_kVc1qsE0lM?si=GrprceIljpkDmEIm"
+    },
+    "ponman": {
+        title: "Ponman",
+        poster: "../priya/fam3.webp",
+        genre: "Classic Family Drama",
+        category: "family",
+        year: "1993",
+        story: "An emotional exploration of rural household dynamics, highlighting self-sacrifice, sibling relationships, and ultimate family reconciliation.",
+        cast: "Ponman stars Basil Joseph, Sajin Gopu, Lijomol Jose, Anand Manmadhan, Deepak Parambol and Sandhya Rajendran. The film is directed by Jothish Shankar, written by G. R. Indugopan and Justin Mathew, with music composed by Justin Varghese, cinematography by Sanu John Varghese and editing by Nidhin Raj Arol.",
+        trailer: "https://www.youtube.com/embed/K3avqcNjcsM?si=12KTt1LghmD6IXD6"
+    },
+    "thaai": {
+        title: "Thaai Kizhavi",
+        poster: "../priya/fam5.jpg",
+        genre: "Family Drama / Comedy",
+        category: "family",
+        year: "2026",
+        story: "Centering around a strict yet deeply affectionate maternal figure whose eccentric wisdom guides her children through modern chaotic life choices.",
+        cast: "Thaai Kizhavi stars Radikaa Sarathkumar, Singampuli, Aruldoss, Bala Saravanan, Munishkanth, Ilavarasu, George Maryan, Vettai Muthukumar and Raichal Rabecca. The film is directed and written by Sivakumar Murugesan, produced by Sudhan Sundaram and Sivakarthikey",
+        trailer: "https://www.youtube.com/embed/OOocSvlhnCE?si=yRpg_uHV31wchJ-b"
+    },
+    "surya": {
+        title: "Surya Vamsam",
+        poster: "../priya/fam4.jpg",
+        genre: "Classic Family Drama",
+        category: "family",
+        year: "1997",
+        story: "An inspirational story of an uneducated son who works tirelessly to earn the respect of his strict father after being cast away from an elite family lineage.",
+        cast: "  Sarathkumar, Devayani, Radhika, Manivannan",
+        trailer: "https://www.youtube.com/embed/vxoEr4AJdLI?si=V-SLx-noSHqTuiLb"
+    },
+    "parimala": {
+        title: "Parimala and Co",
+        poster: "../priya/fam6.avif",
+        genre: "Family Comedy Drama",
+        category: "family",
+        year: "2024",
+        story: "A chaotic comedy focusing on a family-run traditional enterprise dealing with multi-generational conflicts and commercial rivalries.",
+        cast: "Parimala & Co stars Jayaram, Urvashi, Mysskin, Yogi Babu, Sandy, Santosh Sobhan, Sanjana Krishnamoorthy and Ananthika Sanilkumar. The film is directed by Pandiraaj, with music composed by FoxN, cinematography by George C. Williams and editing by Pradeep E. Ragav.",
+        trailer: "https://www.youtube.com/embed/4nt1MyK_wnM?si=6ZESVR5TA5K9TI1a"
+    },
+    "kadaikutty": {
+        title: "Kadaikutty Singam",
+        poster: "../priya/fam8.jpg",
+        genre: "Family Action Drama",
+        category: "family",
+        year: "2018",
+        story: "The youngest son born into a massive, heavily divided agricultural family strives endlessly to maintain peace and absolute unity among his proud sisters and brother-in-laws.",
+        cast: "Karthi, Sayyeshaa, Sathyaraj, Soori",
+        trailer: "https://www.youtube.com/embed/ss-JxvqmaQo?si=tZ1nsiHW5OYFwtge"
+    },
+    "varuthapadatha": {
+        title: "Varuthapadatha Valibar Sangam",
+        poster: "../priya/fam7.jpg",
+        genre: "Romantic Comedy / Family",
+        category: "family",
+        year: "2013",
+        story: "A carefree village youth repeatedly clashes with a strict, proud village chieftain, creating hilarious situations until he falls in love with the leader's daughter.",
+        cast: "Sivakarthikeyan, Sathyaraj, Sri Divya, Soori",
+        trailer: "https://www.youtube.com/embed/P-qYweRlYVg?si=mS_KawsVhwB_fU3D"
+    },
+    "kedi": {
+        title: "Kedi Billa Killadi Ranga",
+        poster: "../priya/fam9.jpg",
+        genre: "Comedy / Family Drama",
+        category: "family",
+        year: "2013",
+        story: "Two lazy, unemployed friends with grand political aspirations finally realize the heavy sacrifices of their loving fathers after facing severe life lessons.",
+        cast: "Sivakarthikeyan, Vimal, Bindu Madhavi, Regina Cassandra",
+        trailer: "https://www.youtube.com/embed/FMIk0G0XdHc?si=e7sCG0hmJf0tOUCC"
+    },
+    "thiruchitrabalam": {
+        title: "Thiruchitrambalam",
+        poster: "../priya/fame10.jpg",
+        genre: "Slice of Life / Family",
+        category: "family",
+        year: "2022",
+        story: "A delivery driver lives with his strict police officer father and lighthearted grandfather while trying to navigate romance with the close support of his childhood best friend.",
+        cast: "Dhanush, Nithya Menen, Bharathiraja, Prakash Raj",
+        trailer: "https://www.youtube.com/embed/tNnPHz1u3RM?si=x5YzXeOsm6RDthtb"
+    },
+    "namma": {
+        title: "Namma Veettu Pillai",
+        poster: "../priya/fam11.jpg",
+        genre: "Rural Family Drama",
+        category: "family",
+        year: "2019",
+        story: "A devoted brother faces immense social pressure and family isolation when he is forced to marry his beloved adopted sister to a crude, unstable local man.",
+        cast: "Sivakarthikeyan, Anu Emmanuel, Aishwarya Rajesh, Soori",
+        trailer: "https://www.youtube.com/embed/59_Fl_e46IU?si=ug7KhrSkQ97XSbqn"
+    },
+    "aanandam": {
+        title: "Aanandam",
+        poster: "../priya/fam12.jpg",
+        genre: "Classic Family Drama",
+        category: "family",
+        year: "2001",
+        story: "An emotional look into four closely bonded brothers whose unshakeable household unity faces severe testing after external misunderstandings and marital adjustments.",
+        cast: "Mammootty, Murali, Abbas, Devayani, Sneha",
+        trailer: "https://www.youtube.com/embed/9B1SDMwQRXk?si=3ch8UjYTQb9bJE-Z"
+    },
+    "falimy": {
+        title: "Falimy",
+        poster: "../priya/fam13.jpg",
+        genre: "Adventure / Family Comedy",
+        category: "family",
+        year: "2023",
+        story: "A highly dysfunctional, arguing family embarks on a chaotic, long-distance road trip to Varanasi, forcing them to tolerate one another and resolve deep hidden grievances.",
+        cast: "Basil Joseph, Jagadish, Manju Pillai, Sandeep Pradeep",
+        trailer: "https://www.youtube.com/embed/knriEyWyGOU?si=uUKW-uUNMSqdWi5u"
+    },
+    "home": {
+        title: "Home",
+        poster: "../priya/fam14.jpg",
+        genre: "Slice of Life Drama",
+        category: "family",
+        year: "2021",
+        story: "A humble, technologically challenged father tries desperately to reconnect with his two smartphone-addicted sons by mastering modern digital trends.",
+        cast: "Indrans, Sreenath Bhasi, Naslen K. Gafoor, Manju Pillai",
+        trailer: "https://www.youtube.com/embed/0xrCuNa_zZU?si=8bJZDxN8rZeytdPS"
+    },
+    "kumbalangi": {
+        title: "Kumbalangi Nights",
+        poster: "../priya/fam15.jpg",
+        genre: "Realistic Family Drama",
+        category: "family",
+        year: "2019",
+        story: "Four estranged, fighting brothers living in a broken home in a fishing village find a path toward maturity and unity when an outsider seeks shelter with them.",
+        cast: "Fahadh Faasil, Soubin Shahir, Shane Nigam, Srinath Bhasi",
+        trailer: "https://www.youtube.com/embed/zpRKm_Mq-n8?si=tv3T4GKyvBr3Wwr2"
+    },
+    "jocobinte": {
+        title: "Jacobinte Swargarajyam",
+        poster: "../priya/fam16.jpg",
+        genre: "Biographical Family Drama",
+        category: "family",
+        year: "2016",
+        story: "When a sudden business betrayal plunges an affluent family into a severe financial crisis in Dubai, the eldest son steps up dramatically to rescue his father's honor.",
+        cast: "Nivin Pauly, Renji Panicker, Lakshmy Ramakrishnan, Sai Kumar",
+        trailer: "https://www.youtube.com/embed/ydHzDHz12fw?si=9-CQP8VUqFQ85IYX"
+    },
+    "jomonte": {
+        title: "Jomonte Suvisheshangal",
+        poster: "../priya/fam17.jpg",
+        genre: "Family Drama / Romance",
+        category: "family",
+        year: "2017",
+        story: "A wealthy, irresponsible young son undergoes an internal transformation, taking absolute charge of his father's life when an unexpected corporate downfall strips the family of everything.",
+        cast: "Dulquer Salmaan, Mukesh, Aishwarya Rajesh, Anupama Parameswaran",
+        trailer: "https://www.youtube.com/embed/eSOVEAbrXYo?si=NrK7vANDCtMIw4Dp"
+    },
+    "njandukalude": {
+        title: "Njandukalude Naattil Oridavela",
+        poster: "../priya/fam18.jpg", // Kept matching your code image source
+        genre: "Comedy / Family Drama",
+        category: "family",
+        year: "2017",
+        story: "A lighthearted, witty exploration of how a tight-knit eccentric family processes and faces a sudden unexpected medical diagnosis concerning their matriarch.",
+        cast: "Nivin Pauly, Shanthi Krishna, Lal, Ahaana Krishna",
+        trailer: "https://www.youtube.com/embed/KNha6hTGqNg?si=kqcG7GzxInW5miJn"
+    },
+
+    // === HEARTBEATS (LOVE) MOVIES ROW ===
+    "irugapatru": {
+        title: "Irugapatru",
+        poster: "../priya/lo1.jpg",
+        genre: "Romantic Drama",
+        category: "love",
+        year: "2023",
+        story: "An insightful look into three modern couples at various breakdown stages, whose complex marital issues are analyzed by a professional relationship counselor.",
+        cast: "Vikram Prabhu, Shraddha Srinath, Sri, Vidharth",
+        trailer: "https://www.youtube.com/embed/iSHJT212TH0?si=BxF0UUiBNNai4Xlc" 
+    },
+    "sita": {
+        title: "Sita Ramam",
+        poster: "../priya/lo2.webp",
+        genre: "Period Romance / Drama",
+        category: "love",
+        year: "2022",
+        story: "An orphan army captain stationed in Kashmir receives beautiful anonymous love letters from a woman named Sita, sparking an epic, unforgettable journey across borders.",
+        cast: "Dulquer Salmaan, Mrunal Thakur, Rashmika Mandanna",
+        trailer: "https://www.youtube.com/embed/QS2UPxj_Y9w?si=S1C3QRXgN9XwA6e7"
+    },
+    "amaran": {
+        title: "Amaran",
+        poster: "../priya/lo3.jpg",
+        genre: "Biographical Romance / Action",
+        category: "love",
+        year: "2024",
+        story: "An emotionally gripping tribute charting the powerful real-life bond, timeless romance, and sacrifices made between a heroic military commander and his steadfast partner.",
+        cast: "Sivakarthikeyan, Sai Pallavi",
+        trailer: "https://www.youtube.com/embed/H7FT-d4YA74?si=YtTAkG7DOpGsgHx4"
+    },
+    "hi": {
+        title: "Hi Nanna",
+        poster: "../priya/lo4.jpg",
+        genre: "Romantic Drama",
+        category: "love",
+        year: "2023",
+        story: "A single father photographer's structured world with his young daughter shifts entirely when a mysterious, kind woman enters their lives, slowly unearthing a deep past.",
+        cast: "Nani, Mrunal Thakur, Baby Kiara Khanna",
+        trailer: "https://www.youtube.com/embed/ZN8RJMUC8Jw?si=P-Va91gi6hciLZVN" 
+    },
+    "ohmy": {
+        title: "Oh My Kadavule",
+        poster: "../priya/lo5.jpg",
+        genre: "Fantasy Romance",
+        category: "love",
+        year: "2020",
+        story: "Given a second chance at life by a divine entity, an unhappy husband gets to hit rewind on his timeline to figure out if his childhood best friend was truly his soulmate.",
+        cast: "Ashok Selvan, Ritika Singh, Vani Bhojan",
+        trailer: "https://www.youtube.com/embed/5lUWBM2uYaQ?si=q3Bfcl1vJSM6AuAg"
+    },
+    "hey": {
+        title: "Hey! Sinamika",
+        poster: "../priya/lo6.jpg",
+        genre: "Romantic Comedy",
+        category: "love",
+        year: "2022",
+        story: "Tired of her husband's overly clingy affection, a wife hires an attractive relationship psychologist to purposefully seduce him, only for the plan to backfire hilariously.",
+        cast: "Dulquer Salmaan, Aditi Rao Hydari, Kajal Aggarwal",
+        trailer: "https://www.youtube.com/embed/l6Yarg2FMeI?si=BHzQT1RsyC17eS8k"
+    },
+    "alai": {
+        title: "Alai Payuthey",
+        poster: "../priya/lo7.jpg",
+        genre: "Classic Romance",
+        category: "love",
+        year: "2000",
+        story: "An idealistic young couple elopes against their families' wishes, only to find out that real-world married life presents struggles vastly different from fairy-tale courting.",
+        cast: "Madhavan, Shalini, Vivek, Swarnamalya",
+        trailer: "https://www.youtube.com/embed/e_11XFHsXi4?si=WH0G0D1IXRgGkjX0"
+    },
+    "muthal": {
+        title: "Muthal Nee Mudivum Nee",
+        poster: "../priya/lo8.jpg",
+        genre: "Coming-of-Age Romance",
+        category: "love",
+        year: "2022",
+        story: "A nostalgic ride back to 1990s high school days following a group of teenagers navigating first loves, friendships, and how life turns out years down the line.",
+        cast: "Kishen Das, Meetha Raghunath, Harish Kumar",
+        trailer: "https://www.youtube.com/embed/ZBO8W4wmLQc?si=t1E9H_BVfwsJC9Zj"
+    },
+    "okathal": {
+        title: "O Kadhal Kanmani",
+        poster: "../priya/lo9.jpg",
+        genre: "Modern Romance",
+        category: "love",
+        year: "2015",
+        story: "Two highly ambitious young professionals choose a live-in relationship in Mumbai to avoid marriage commitments, but an elderly couple's unconditional bond changes their perspectives.",
+        cast: "Dulquer Salmaan, Nithya Menen, Prakash Raj, Leela Samson",
+        trailer: "https://www.youtube.com/embed/TjJbdcKKlnU?si=8Ss_JFE6elTeQam7"
+    },
+    "aromaley": {
+        title: "Aaromaley",
+        poster: "../priya/lo10.jpg",
+        genre: "Romantic Drama",
+        category: "love",
+        year: "2024",
+        story: "An emotional, contemporary musical romance tracking two separate life trajectories that cross paths under unexpected, challenging personal constraints.",
+        cast: "Fresh contemporary lead cast line",
+        trailer: "https://www.youtube.com/embed/wriyKmCwN_8?si=xeJ7m51m96pHmzBz"
+    },
+    "with": {
+        title: "With Love",
+        poster: "../priya/lo11.webp",
+        genre: "Romantic Drama",
+        category: "love",
+        year: "2023",
+        story: "An elegant anthology style portrait dealing with the fragile, beautiful facets of modern urban dating, detailing heartbreaks and emotional healing.",
+        cast: "Ensemble Romantic Lead Cast",
+        trailer: "https://www.youtube.com/embed/je1xB5ColOQ?si=n2_32_J6BrnXESZb"
+    },
+    "mouna": {
+        title: "Mouna Ragam",
+        poster: "../priya/lo18.webp",
+        genre: "Classic Romance / Drama",
+        category: "love",
+        year: "1986",
+        story: "A grieving young woman is forced into an arranged marriage by her family but remains completely cold to her patient husband while secretly mourning her lost first love.",
+        cast: "Mohan, Revathi, Karthik",
+        trailer: "https://www.youtube.com/embed/glmjMOKiWRw?si=J36OA0861_D1KcEX"
+    },
+    "vinnaithaandi": {
+        title: "Vinnaithaandi Varuvaayaa",
+        poster: "../priya/lo13.jpg",
+        genre: "Musical Romance",
+        category: "love",
+        year: "2010",
+        story: "An aspiring filmmaker falls deeply in love with an older, traditional Christian neighbor girl, leading to a complex, emotionally turbulent romantic pursuit.",
+        cast: "Silambarasan, Trisha Krishnan",
+        trailer: "https://www.youtube.com/embed/KmPOJPWfQz4?si=E_SOLMXgGoyTnO9d"
+    },
+    "vaaranam": {
+        title: "Vaaranam Aayiram",
+        poster: "../priya/lo14.jpg",
+        genre: "Musical Romance / Drama",
+        category: "love",
+        year: "2008",
+        story: "An army officer channels his deep grief through memories after learning of his father's passing, recalling his profound first love, a painful tragedy, and eventual recovery.",
+        cast: "Suriya, Simran, Ramya, Sameera Reddy",
+        trailer: "https://www.youtube.com/embed/qu08mmVxJYA?si=MVYYTzG13sc7-bIG"
+    },
+    "ohm": {
+        title: "Ohm Shanthi Oshaana",
+        poster: "../priya/lo16.avif",
+        genre: "Romantic Comedy",
+        category: "love",
+        year: "2014",
+        story: "A lively, tomboyish high school girl takes full charge of her destiny by actively chasing her long-term crush on a mature, farming-oriented local hero over several years.",
+        cast: "Nazriya Nazim, Nivin Pauly, Renji Panicker",
+        trailer: "https://www.youtube.com/embed/dO9AWeGTJ4M?si=aDoIW7IsIyG1rTHz"
+    },
+    "fidaa": {
+        title: "Fidaa",
+        poster: "../priya/lo15.webp",
+        genre: "Romantic Drama",
+        category: "love",
+        year: "2017",
+        story: "An NRI medical student falls in love with a fierce, independent village girl from Telangana, creating a battle of ego and deep regional attachment that threatens their union.",
+        cast: "Varun Tej, Sai Pallavi",
+        trailer: "https://www.youtube.com/embed/NJxiKe3Gk7Y?si=Dn2bO5y5Je3lnvXW"
+    },
+    "roja": {
+        title: "Roja",
+        poster: "../priya/lo17.jpg",
+        genre: "Classic Political Romance",
+        category: "love",
+        year: "1992",
+        story: "A simple village girl goes on an extraordinary, desperate crusade to free her newlywed cryptologist husband after he is abducted by militants in Kashmir.",
+        cast: "Arvind Swamy, Madhoo, Pankaj Kapur",
+        trailer: "https://www.youtube.com/embed/2rLDPOvCbKY?si=YiNjDXzytKVzksK9"
+    },
+    "premalu": {
+        title: "Premalu",
+        poster: "../priya/lo12.jpg",
+        genre: "Romantic Comedy",
+        category: "love",
+        year: "2024",
+        story: "A clumsy, unmotivated youth moves to Hyderabad for a gate course and hilariously falls into a one-sided pursuit of an organized, high-earning IT employee.",
+        cast: "Naslen K. Gafoor, Mamitha Baiju, Shyam Mohan",
+        trailer: "https://www.youtube.com/embed/rR_2ti4l3nM?si=_9viCE8fGTbWqGYc"
+    },
+
+    // === ENTERTAINMENT MOVIES ROW ===
+    "vaazha": {
+        title: "Vaazha II",
+        poster: "../priya/en1.jpg",
+        genre: "Comedy / Youth Drama",
+        category: "entertainment",
+        year: "2024",
+        story: "A humorous look into the frantic, misguided lives of group backbenchers dealing with parental pressure and hilarious corporate misadventures.",
+        cast: "Fresh energetic youth comedy line",
+        trailer: "https://www.youtube.com/embed/Xhqc5q12r8w?si=4tQuOP5gyQq9-FYO"
+    },
+    "neymar": {
+        title: "Neymar",
+        poster: "../priya/en2.webp",
+        genre: "Comedy / Adventure",
+        category: "entertainment",
+        year: "2023",
+        story: "Two friends buy a highly mischievous, untamable puppy named Neymar to impress a girl, which kicks off an unpredictable cross-state chase to retrieve it.",
+        cast: "Naslen K. Gafoor, Mathew Thomas, Johny Antony",
+        trailer: "https://www.youtube.com/embed/XH-nCJs2Ym0?si=M8VzIzzMmGUYFzm4"
+    },
+    "palthu": {
+        title: "Palthu Janwar",
+        poster: "../priya/en3.webp",
+        genre: "Comedy / Slice of Life",
+        category: "entertainment",
+        year: "2022",
+        story: "An aspiring animator reluctantly takes up a government job as a livestock inspector in a remote hill village, leading to chaotic encounters with quirky locals and farm animals.",
+        cast: "Basil Joseph, Indrans, Johny Antony",
+        trailer: "https://www.youtube.com/embed/yMouRJKYiiU?si=K_SFw5lpHIzR26s7"
+    },
+    "sivakumarin": {
+        title: "Sivakumarin Sabadham",
+        poster: "../priya/en4.webp",
+        genre: "Comedy / Drama",
+        category: "entertainment",
+        year: "2021",
+        story: "A happy-go-lucky young man from a traditional weaving family takes an oath to rebuild his grandfather's lost textile brand while managing neighborhood romance.",
+        cast: "Hiphop Tamizha Adhi, Madhuri Jain, Elango Kumaravel",
+        trailer: "https://www.youtube.com/embed/RV2FWg4pQYA?si=gqVN2Y8BZ1lgg4O7"
+    },
+    "indru": {
+        title: "Indru Netru Naalai",
+        poster: "../priya/en5.webp",
+        genre: "Sci-Fi Comedy",
+        category: "entertainment",
+        year: "2015",
+        story: "Two ordinary guys stumble upon an abandoned time machine from the future and decide to use it to run a lucrative business fixing historical mistakes for clients.",
+        cast: "Vishnu Vishal, Miya, Karunakaran, T.M. Karthik",
+        trailer: "https://www.youtube.com/embed/1cRnnBvrpXk?si=t_oUctYZctyCBWcT"
+    },"jaya": {
+    title: "Jaya Jaya Jaya Jaya Hey",
+    poster: "../priya/en6.jpg",
+    genre: "Comedy / Drama",
+    category: "entertainment",
+    year: "2022",
+    story: "The hilarious and empowering battle of wits within a chaotic marriage where a young woman decides to stand up against her abusive husband.",
+    cast: "Basil Joseph, Darshana Rajendran, Aju Varghese",
+    trailer: "https://www.youtube.com/embed/XMW466vCHk8?si=An0Y81X4J_d9hlhl"
+  },
+  "guruvayoor": {
+    title: "Guruvayoor Ambalanadayil",
+    poster: "../priya/en7.avif",
+    genre: "Comedy / Family",
+    category: "entertainment",
+    year: "2024",
+    story: "A series of comical misadventures and misunderstandings unfold as a young man prepares for his wedding at the famous Guruvayoor temple.",
+    cast: "Prithviraj Sukumaran, Basil Joseph, Nikhila Vimal, Anaswara Rajan",
+    trailer:  "https://www.youtube.com/embed/u-BLHW3tJPA?si=IoFUpTO4v-nDdj7Y"
+  },
+  "meesaya": {
+    title: "Meesaya Murukku",
+    poster: "../priya/en8.jpg",
+    genre: "Musical / Rom-Com",
+    category: "entertainment",
+    year: "2017",
+    story: "A young college student follows his passion for independent music while dealing with romance, friendships, and his father's expectations.",
+    cast: "Hiphop Tamizha Adhi, Aathmika, Vivek, Vijayalakshmi",
+    trailer: "https://www.youtube.com/embed/XUCDJr6XLsE?si=MJTlhpLgU7vSzXC2"
+  },
+  "velaiyilla": {
+    title: "Velaiilla Pattadhari",
+    poster: "../priya/en9.jpg",
+    genre: "Action / Drama / Comedy",
+    category: "entertainment",
+    year: "2014",
+    story: "An unemployed civil engineer struggles to find a job matching his qualifications until a tragic event forces him to fight for his dreams.",
+    cast: "Dhanush, Amala Paul, Vivek, Samuthirakani, Saranya Ponvannan",
+    trailer: "https://www.youtube.com/embed/Eat-EkMyNj8?si=qIlWRTmCdJwan5cN"
+  },
+  "don": {
+    title: "Don",
+    poster: "../priya/en10.jpg",
+    genre: "Coming-of-age / Comedy",
+    category: "entertainment",
+    year: "2022",
+    story: "A reluctant engineering student spends his college years trying to discover his true passion while constantly clashing with a strict discipline mentor.",
+    cast: "Sivakarthikeyan, S. J. Suryah, Priyanka Arul Mohan, Samuthirakani",
+    trailer: "https://www.youtube.com/embed/1at8wo8TnEM?si=ijGEmZhSWSysnxdx"
+  },
+  "kadhalum": {
+    title: "Kadhalum Kadandhu Pogum",
+    poster: "../priya/en11.jpg",
+    genre: "Rom-Com / Drama",
+    category: "entertainment",
+    year: "2016",
+    story: "An unlikely friendship blooms between an engineering graduate struggling to find a corporate job and a local rowdy with big dreams.",
+    cast: "Vijay Sethupathi, Madonna Sebastian, Samuthirakani",
+    trailer: "https://www.youtube.com/embed/tTaKnjPbOPU?si=3jdAfghgDn1J5rUY"
+  },
+  "ohmana": {
+    title: "Oh Manapenne!",
+    poster: "../priya/en12.jpg",
+    genre: "Rom-Com",
+    category: "entertainment",
+    year: "2021",
+    story: "An easy-going guy and a career-driven business woman meet during an accidental matchmaking mix-up and decide to start a food truck together.",
+    cast: "Harish Kalyan, Priya Bhavani Shankar, Ashwin Kumar",
+    trailer: "https://www.youtube.com/embed/zSp_0y2hjZs?si=Ovwxv_be_qsRV2tM"
+  },
+  "paranthu": {
+    title: "Parandhu Sella Vaa",
+    poster: "../priya/en13.jpg",
+    genre: "Romance / Comedy",
+    category: "entertainment",
+    year: "2016",
+    story: "Set in Singapore, a young man lies about having a beautiful girlfriend to escape his family's arranged marriage pressures, resulting in utter chaos.",
+    cast: "Luthfudeen, Aishwarya Rajesh, Narelle Kheng, Karunakaran",
+    trailer: "https://www.youtube.com/embed/lv9tEVOpnfY?si=6KMTPcRroBfCOLqc"
+  },
+  "good": {
+    title: "Good Night",
+    poster: "../priya/en14.jpg",
+    genre: "Comedy / Family Drama",
+    category: "entertainment",
+    year: "2023",
+    story: "An ordinary IT guy faces extreme embarrassment and relationship hurdles due to his intense snoring problem after marrying the love of his life.",
+    cast: "K Manikandan, Meetha Raghunath, Ramesh Thilak",
+    trailer: "https://www.youtube.com/embed/W1JzR8muGn4?si=YF-vc-Ilq0xtDRYz"
+  },
+  "dada": {
+    title: "Dada",
+    poster: "../priya/en15.jpg",
+    genre: "Drama / Romance / Comedy",
+    category: "entertainment",
+    year: "2023",
+    story: "A young, irresponsible college student is forced to step up and become a single father, learning life-changing lessons along the way.",
+    cast: "Kavin, Aparna Das, K. Bhagyaraj, VTV Ganesh",
+    trailer: "https://www.youtube.com/embed/Glgll-WtWZQ?si=cTVZgUrGFZQq5oQ6"
+  },
+  "mozhi": {
+    title: "Mozhi",
+    poster: "../priya/en16.jpg",
+    genre: "Rom-Com / Drama",
+    category: "entertainment",
+    year: "2007",
+    story: "A musician falls in love with a deaf-mute woman who has a strong, independent personality but is highly guarded against emotional attachments.",
+    cast: "Prithviraj Sukumaran, Jyothika, Prakash Raj, Swarnamalya",
+    trailer: "https://www.youtube.com/embed/GbnvapQyD3U?si=BPGvakdtGdTTh8Dn"
+  },
+  "bangalore": {
+    title: "Bangalore Days",
+    poster: "../priya/en17.jpg",
+    genre: "Coming-of-age / Drama",
+    category: "entertainment",
+    year: "2014",
+    story: "Three close cousins move from Kerala to Bangalore, chasing their individual dreams while dealing with the realities of love, loss, and adulthood.",
+    cast: "Dulquer Salmaan, Nivin Pauly, Nazriya Nazim, Fahadh Faasil",
+    trailer: "https://www.youtube.com/embed/uVpHL5g4buY?si=e7bzrX8kXYlx6lqY"
+  },
+
+  
+  // FEEL GOOD MOVIES
+  
+  "santohs": {
+    title: "Santosh Subramaniam",
+    poster: "../priya/fe1.jpg",
+    genre: "Family / Romance",
+    category: "feel-good",
+    year: "2008",
+    story: "A young man whose life is entirely micro-managed by his overbearing father falls in love with a bubbly, free-spirited girl and fights for his independence.",
+    cast: "Jayam Ravi, Genelia D'Souza, Prakash Raj",
+    trailer: "https://www.youtube.com/embed/fI-zr2tbOtk?si=9yb6f2EB60_cMv-f"
+  },
+  "aandavan": {
+    title: "Aandavan Kattalai",
+    poster: "../priya/fe2.jpg",
+    genre: "Satire / Drama",
+    category: "feel-good",
+    year: "2016",
+    story: "Two guys from a village try to migrate to London using a fake passport racket, getting tangled in a web of hilarious lies and legal messes.",
+    cast: "Vijay Sethupathi, Ritika Singh, Yogi Babu",
+    trailer: "https://www.youtube.com/embed/PY2sEuriqLM?si=SW4HH4eHFk_S55Cp"
+  },
+  "remo": {
+    title: "Remo",
+    poster: "../priya/f3.jpg",
+    genre: "Rom-Com",
+    category: "feel-good",
+    year: "2016",
+    story: "An aspiring actor disguises himself as a female nurse to get closer to a beautiful doctor he has fallen head over heels for.",
+    cast: "Sivakarthikeyan, Keerthy Suresh, Sathish",
+    trailer: "https://www.youtube.com/embed/GEB4qrrWIgs?si=SV53ip_esMcpU5Yg"
+  },
+  "anbe": {
+    title: "Anbe Sivam",
+    poster: "../priya/fe4.jpg",
+    genre: "Drama / Cult Classic",
+    category: "feel-good",
+    year: "2003",
+    story: "An arrogant ad filmmaker and a scarred, communist street theater artist form an unforgettable bond while stuck traveling together from Bhubaneswar to Chennai.",
+    cast: "Kamal Haasan, Madhavan, Kiran Rathod",
+    trailer: "https://www.youtube.com/embed/lPLN69KAukE?si=4lNhsuSh8Je4x4cW"
+  },
+  "kamali": {
+    title: "Kamali from Nadukkaveri",
+    poster: "../priya/fe5.jpg",
+    genre: "Drama / Educational",
+    category: "feel-good",
+    year: "2021",
+    story: "A girl from a small village defies all odds and social barriers to clear national exams and secure admission into a prestigious IIT.",
+    cast: "Anandhi, Rohit Saraf, Prathap Pothen",
+    trailer: "https://www.youtube.com/embed/oHQQjQKdOWg?si=AvFDjuOkEGzECdAP"
+  },
+  "sirai": {
+    title: "Sirai",
+    poster: "../priya/fe6.jpg",
+    genre: "Classic Drama",
+    category: "feel-good",
+    year: "1984",
+    story: "A heartwarming and profound look at redemption, humanity, and unconventional relationships set in a traditional societal landscape.",
+    cast: "Rajesh, Lakshmi, Prasanna",
+    trailer: "https://www.youtube.com/embed/yqdYIMqB1rQ?si=12LDOBRozPBvvxo0"
+  },
+  "36va": {
+    title: "36 Vayadhinile",
+    poster: "../priya/fe7.jpg",
+    genre: "Drama / Empowerment",
+    category: "feel-good",
+    year: "2015",
+    story: "A 36-year-old housewife and government clerk rediscovers her youthful drive and forms an organic farming revolution after being sidelined by her family.",
+    cast: "Jyothika, Rahman, Abhirami",
+    trailer: "https://www.youtube.com/embed/LOEqjt533WY?si=_4qPigDfFjaW7y_k"
+  },
+  "12th": {
+    title: "12th Fail",
+    poster: "../priya/fe8.avif",
+    genre: "Biographical / Drama",
+    category: "feel-good",
+    year: "2023",
+    story: "The real-life inspiring journey of Manoj Kumar Sharma, who overcomes extreme poverty and academic failure to crack India's toughest UPSC civil services exam.",
+    cast: "Vikrant Massey, Medha Shankar, Anant V Joshi",
+    trailer: "https://www.youtube.com/embed/KjbtuqENvVE?si=ESPPgo_XJfkcEQOH"
+  },
+  "jersey": {
+    title: "Jersey",
+    poster: "../priya/fe9.jpg",
+    genre: "Sports / Drama",
+    category: "feel-good",
+    year: "2019",
+    story: "A failed cricketer in his late thirties decides to return to the sport to fulfill his young son's wish for a jersey, fighting systemic bias and health issues.",
+    cast: "Nani, Shraddha Srinath, Sathyaraj",
+    trailer: "https://www.youtube.com/embed/AjAe_Q1WZ_8?si=w67BuCWF5R0vkaFI"
+  },
+  "thalapathy": {
+    title: "Thalapathi",
+    poster: "../priya/fe10.jpg",
+    genre: "Crime / Drama",
+    category: "feel-good",
+    year: "1991",
+    story: "An abandoned courageous orphan grows up to become a local muscleman who forms an unbreakable bond of loyalty and friendship with a benevolent don.",
+    cast: "Rajinikanth, Mammootty, Shobana, Arvind Swamy",
+    trailer: "https://www.youtube.com/embed/CCvrOSnfUeU?si=8XYK3rW_5NHKmhUv"
+  },
+  "ethir": {
+    title: "Ethir Neechal",
+    poster: "../priya/fe12.jpg",
+    genre: "Sports / Comedy",
+    category: "feel-good",
+    year: "2013",
+    story: "A young man embarrassed by his unique given name changes it to find luck, eventually striving to prove his worth by running the Chennai Marathon.",
+    cast: "Sivakarthikeyan, Priya Anand, Nandita Swetha",
+    trailer: "https://www.youtube.com/embed/JHaTrO-ANpg?si=0PSHr_F8EpB3n2By"
+  },
+  "meiya": {
+    title: "Meiyazhagan",
+    poster: "../priya/fe11.jpg",
+    genre: "Drama / Slice of Life",
+    category: "feel-good",
+    year: "2024",
+    story: "A man returns to his hometown after decades and undergoes a transformative emotional experience through a night spent with an overly affectionate cousin.",
+    cast: "Karthi, Arvind Swamy, Sri Divya",
+    trailer: "https://www.youtube.com/embed/QgzmCWzK5gA?si=1e2znwSxKS6cu9K1"
+  },
+  "thozha": {
+    title: "Thozha",
+    poster: "../priya/fe13.jpg",
+    genre: "Drama / Comedy",
+    category: "feel-good",
+    year: "2016",
+    story: "A carefree paroled convict is hired to be the caretaker of a quadriplegic billionaire, sparking a life-changing friendship for both.",
+    cast: "Nagarjuna Akkineni, Karthi, Tamannaah Bhatia",
+    trailer: "https://www.youtube.com/embed/Wlbywc5-f-g?si=foK-Xd0j16k96V0L"
+  },
+  "paiyaa": {
+    title: "Paiyaa",
+    poster: "../priya/fe14.jpg",
+    genre: "Romance / Action / Road Movie",
+    category: "feel-good",
+    year: "2010",
+    story: "A carefree young man volunteers to drive a beautiful woman from Bangalore to Mumbai, completely unaware that she is fleeing dangerous thugs.",
+    cast: "Karthi, Tamannaah Bhatia, Milind Soman",
+    trailer: "https://www.youtube.com/embed/Y0v4qj_kueg?si=1E9BDQhgsiIreIDU" 
+  },
+  "kandukonden": {
+    title: "Kandukondain Kandukondain",
+    poster: "../priya/fe15.avif",
+    genre: "Romance / Musical / Drama",
+    category: "feel-good",
+    year: "2000",
+    story: "An adaptation of Jane Austen's 'Sense and Sensibility', focusing on a mother and her three daughters trying to survive after losing their ancestral estate.",
+    cast: "Mammootty, Ajith Kumar, Tabu, Aishwarya Rai, Abbas",
+    trailer: "https://www.youtube.com/embed/Gep0IzKTcFI?si=HvGA8bRojcHYFDF5"
+  },
+  "96v": {
+    title: "96",
+    poster: "../priya/fe16.jpg",
+    genre: "Romantic Drama",
+    category: "feel-good",
+    year: "2018",
+    story: "Two high school sweethearts meet again after 22 years at a school batch reunion, leading to a nostalgic and bittersweet walk down memory lane.",
+    cast: "Vijay Sethupathi, Trisha Krishnan, Gouri G. Kishan",
+    trailer: "https://www.youtube.com/embed/63F9Pv4k4wk?si=85uNy4jmWkRh_qKF"
+  },
+  "meyaadha": {
+    title: "Meyaadha Maan",
+    poster: "../priya/fe17.jpg",
+    genre: "Rom-Com / Musical",
+    category: "feel-good",
+    year: "2017",
+    story: "A local light-music singer who is too timid to express his love for his college crush gets into crazy situations helped by his loyal sister and best friend.",
+    cast: "Vaibhav, Priya Bhavani Shankar, Indhuja Ravichandran",
+    trailer: "https://www.youtube.com/embed/qWjD-ChIAto?si=TcOdkV7VoT7I4Gr3"
+  },
+  
+
+  // ==========================================
+  // HORROR MOVIES
+  // ==========================================
+  "arundhati": {
+    title: "Arundhati",
+    poster: "../priya/ho2.jpg",
+    genre: "Fantasy Horror",
+    category: "horror",
+    year: "2009",
+    story: "A young woman visits her ancestral home where she discovers she looks exactly like her brave great-grandmother, who trapped an evil black magician.",
+    cast: "Anushka Shetty, Sonu Sood, Sayaji Shinde",
+    trailer: "https://www.youtube.com/embed/EJgnS2yLAs0?si=p4mY-3dtIxBzA_rv"
+  },
+  "demonte": {
+    title: "Demonte Colony",
+    poster: "../priya/ho1.jpg",
+    genre: "Supernatural Horror / Thriller",
+    category: "horror",
+    year: "2015",
+    story: "Four intoxicated friends visit a cursed, abandoned bungalow in De Monte Colony out of curiosity and steal a valuable, haunted diamond necklace.",
+    cast: "Arulnithi, Ramesh Thilak, Sananth, MS Bhaskar",
+    trailer: "https://www.youtube.com/embed/e-HBSI2cPYM?si=7xDrNpzdeey7yhaM"
+  },
+  "13b": {
+    title: "13B: Fear Has a New Address",
+    poster: "../priya/ho3.jpg",
+    genre: "Psychological Horror",
+    category: "horror",
+    year: "2009",
+    story: "A man's family moves into a new apartment, only to discover a TV daily soap opera that eerily predicts the grim future of his own family.",
+    cast: "Madhavan, Neetu Chandra, Sachin Khedekar",
+    trailer: "https://www.youtube.com/embed/5jQ0j22PkWA?si=nQ9ZkLF9AQcEkSrJ"
+  },
+  "sarvam-maya": {
+    title: "Maya",
+    poster: "../priya/ho4.jpg",
+    genre: "Supernatural Horror",
+    category: "horror",
+    year: "2015",
+    story: "A single mother takes on a challenge to watch a horror movie alone in a theater to win money, unleashing a dark connection to an insane asylum ghost.",
+    cast: "Nayanthara, Aari Arujunan, Amzath Khan",
+    trailer: "https://www.youtube.com/embed/uDh6gYX_4S0?si=x1VySf6nkRj3189M"
+  },
+  "pisasu": {
+    title: "Pisasu",
+    poster: "../priya/ho5.jpg",
+    genre: "Gothic Horror / Drama",
+    category: "horror",
+    year: "2014",
+    story: "A compassionate violinist tries to save a young girl hit by a car. After she passes away, her benevolent spirit begins residing in his apartment.",
+    cast: "Naga, Prayaga Martin, Radharavi",
+    trailer: "https://www.youtube.com/embed/yp9_2cZiyGI?si=gVBvoSYqDCkFTArU"
+  },
+  "eeram": {
+    title: "Eeram",
+    poster: "../priya/ho6.jpg",
+    genre: "Supernatural Thriller",
+    category: "horror",
+    year: "2009",
+    story: "An honest police officer investigates the mysterious drowning suicide of his former lover, finding supernatural patterns tied to water leaks.",
+    cast: "Aadhi Pinisetty, Sindhu Menon, Nandha, Saranya Mohan",
+    trailer: "https://www.youtube.com/embed/RwzfXMs5WtM?si=MDItwYmJ-KND9GHu"
+  },
+  "aval": {
+    title: "Aval",
+    poster: "../priya/ho8.jpg",
+    genre: "Pure Horror",
+    category: "horror",
+    year: "2017",
+    story: "A neurosurgeon and his wife have their peaceful Himalayan life disrupted when a family moves next door and their daughter gets violently possessed.",
+    cast: "Siddharth, Andrea Jeremiah, Anisha Victor",
+    trailer: "https://www.youtube.com/embed/Ft1KvQNteYY?si=4vtf0urpDxL-wiKi"
+  },
+  "kanchana": {
+    title: "Kanchana",
+    poster: "../priya/ho10.jpg",
+    genre: "Horror / Comedy",
+    category: "horror",
+    year: "2011",
+    story: "A young man terrified of ghosts gets possessed by a trio of spirits—a transgender woman, a Muslim man, and a kid—seeking bloody revenge.",
+    cast: "Raghava Lawrence, Sarathkumar, Lakshmi Rai, Kovai Sarala",
+    trailer: "https://www.youtube.com/embed/tnW1AHySrXU?si=OThFwL5ocH8BxkSm"
+  },
+  "aranmanai": {
+    title: "Aranmanai",
+    poster: "../priya/ho11.jpg",
+    genre: "Horror / Comedy",
+    category: "horror",
+    year: "2014",
+    story: "An extended family returns to their native palace to sell it off, unearthing a vengeful entity that has been waiting for justice for years.",
+    cast: "Sundar C, Vinay Rai, Hansika Motwani, Andrea Jeremiah",
+    trailer: "https://www.youtube.com/embed/1lWeaBsEels?si=ERWbfenL8wh8HTbm"
+  },
+  "muni": {
+    title: "Muni",
+    poster: "../priya/ho12.jpg",
+    genre: "Horror / Comedy",
+    category: "horror",
+    year: "2007",
+    story: "Ganesh moves into a new house where he becomes the vessel for a kind-hearted man murdered by a corrupt politician seeking retribution.",
+    cast: "Raghava Lawrence, Vedhika, Rajkiran",
+    trailer: "https://www.youtube.com/embed/MCRheeH7PDs?si=ETRmHItYbTzwZM13"
+  },
+  "dies": {
+    title: "Dies Irae",
+    poster: "../priya/ho13.jpg",
+    genre: "Short Thriller / Mystery",
+    category: "horror",
+    year: "2022",
+    story: "A highly atmospheric, dark psychological puzzle tracking a ritualistic sequence where reality blurrily shifts for the protagonist.",
+    cast: "Independent Cast",
+    trailer: "https://www.youtube.com/embed/ZGyGq7l9ycY?si=9d4miih0qXVQWqC3"
+  },
+  "bootha": {
+    title: "Bhoothakaalam",
+    poster: "../priya/ho14.jpg",
+    genre: "Psychological Horror",
+    category: "horror",
+    year: "2022",
+    story: "Following the death of a relative, a mother and her son experience unexplained paranormal events in their house, stressing their mental health.",
+    cast: "Shane Nigam, Revathy, Saiju Kurup",
+    trailer: "https://www.youtube.com/embed/jlp5U8PPD74?si=-YAHNO28ZclEhxaC"
+  },
+  "bramayugam": {
+    title: "Bramayugam",
+    poster: "../priya/ho15.jpg",
+    genre: "Period Horror / Thriller",
+    category: "horror",
+    year: "2024",
+    story: "A court singer escapes slavery but stumbles into a mysterious, decaying mansion ruled by an enigmatic landlord practicing dark, ancient arts.",
+    cast: "Mammootty, Arjun Ashokan, Sidharth Bharathan",
+    trailer: "https://www.youtube.com/embed/W1XAXHmfzeU?si=K0hJW8rsJQ1hkt5_"
+  },
+  "manichitra": {
+    title: "Manichitrathazhu",
+    poster: "../priya/ho16.webp",
+    genre: "Psychological Thriller / Horror",
+    category: "horror",
+    year: "1993",
+    story: "An ancient mansion is believed to be haunted by the spirit of a dancer. When unusual behavior emerges, an eccentric psychiatrist steps in.",
+    cast: "Mohanlal, Shobana, Suresh Gopi",
+    trailer: "https://www.youtube.com/embed/MLmT2Bbu1d0?si=ckSb17qf0F7PexT4"
+  },
+  "ananadha": {
+    title: "Anandhapurathu Veedu",
+    poster: "../priya/ho17.jpg",
+    genre: "Supernatural / Drama",
+    category: "horror",
+    year: "2010",
+    story: "A man flees to his abandoned ancestral home with his family to hide from lenders, discovering the home is filled with friendly ghost relatives.",
+    cast: "Nandha, Chaya Singh, Master Aryan",
+    trailer: "https://www.youtube.com/embed/9TyRWmbp73Y?si=Mq4uKWOMzS3p7nbK"
+  },
+  "ambuli": {
+    title: "Ambuli 3D",
+    poster: "../priya/ho18.jpg",
+    genre: "Sci-Fi Horror / Mystery",
+    category: "horror",
+    year: "2012",
+    story: "Two college students investigate a mysterious cornfield rumored to be guarded by a mutated beast-man created through genetic experiments.",
+    cast: "R. Parthiban, Gokulnath, Jagan",
+    trailer: "https://www.youtube.com/embed/0sW264HFB8o?si=krTTZqyN_bHY9GFC"
+  },
+  "the": {
+    title: "The Conjuring",
+    poster: "../priya/ho19.jpg",
+    genre: "Supernatural Horror",
+    category: "horror",
+    year: "2013",
+    story: "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark, demonic presence inside their isolated farmhouse.",
+    cast: "Vera Farmiga, Patrick Wilson, Lili Taylor",
+    trailer: "https://www.youtube.com/embed/ejMMn0t58Lc?si=r_luA53bBRlQFDDe"
+  }
+
+    
+            
+        }
+        const defaultMovie = {
+            title: "StreamVerse Cinematic Feature",
+            poster: "../priya/banner1.jpg",
+            genre: "Premium Blockbuster",
+            category: "general",
+            year: "Trending",
+            story: "Comprehensive plot records and structural cast guides are currently streaming updates live into the active framework catalog repository.",
+            cast: "Ensemble Performance Cast Lineup",
+            trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        };
+
+        // Initialize URL Routing parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('id');
+        const selected = moviesData[movieId] || defaultMovie;
+
+        // Apply fields directly to dynamic layout components
+        document.getElementById("movieTitle").innerText = selected.title;
+        document.getElementById("movieGenre").innerText = selected.genre;
+        document.getElementById("movieYear").innerText = selected.year;
+        document.getElementById("movieStory").innerText = selected.story;
+        document.getElementById("movieCast").innerText = selected.cast;
+        document.getElementById("moviePoster").src = selected.poster;
+        document.getElementById("movieTrailer").src = selected.trailer;
+        document.getElementById("bgBlur").src = selected.poster; // Uses movie poster as ambient blurred background
+
+        // Process Smart Category recommendation lists filtered seamlessly
+        const likeGrid = document.getElementById("likeGrid");
+        Object.keys(moviesData).forEach(key => {
+            const item = moviesData[key];
+            if (item.category === selected.category && key !== movieId) {
+                const card = document.createElement("a");
+                card.href = `movie-details.html?id=${key}`;
+                card.className = "recom-card";
+                card.innerHTML = `
+                    <img src="${item.poster}" alt="${item.title}">
+                    <h4>${item.title}</h4>
+                `;
+                likeGrid.appendChild(card);
+            }
+        });
+    </script>
+</body>
+</html>
