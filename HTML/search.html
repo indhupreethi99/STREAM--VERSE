@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamVerse Search</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-900 px-4 py-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
+
+      <h1 class="text-2xl font-bold text-red-500">
+        StreamVerse
+      </h1>
+
+      <!-- Kumaravel home page file name vandha href maathu -->
+      <a
+        href="home.html"
+        class="hover:text-red-500 transition"
+      >
+        Home
+      </a>
+
+    </div>
+  </nav>
+
+  <!-- Search Section -->
+  <section class="max-w-7xl mx-auto px-4 py-6">
+
+    <!-- Search Bar -->
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search Movies..."
+      class="w-full p-3 rounded-lg text-black outline-none"
+    >
+
+    <!-- Filters -->
+    <div class="flex flex-col md:flex-row gap-4 mt-4">
+
+      <select
+        id="genreFilter"
+        class="w-full md:w-52 p-3 rounded-lg text-black"
+      >
+        <option value="all">All Genres</option>
+        <option value="Action">Action</option>
+        <option value="Drama">Drama</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Comedy">Thriller</option>
+      </select>
+
+      <select
+        id="sortOption"
+        class="w-full md:w-52 p-3 rounded-lg text-black"
+      >
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+      </select>
+
+    </div>
+
+    <!-- Results -->
+    <div
+      id="results"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8"
+    ></div>
+
+  </section>
+
+  <script src="../JAVA SCRIPT/search.js"></script>
+</body>
+</html>

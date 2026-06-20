@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watchlist</title>
+    <!--Tailwindcss CDN link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Font Awesome CDN link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--Google font family link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#0F172A]" style="font-family: &quot;Inter&quot; sans-serif">
+    <!--Header Section-->
+    <section>
+      <div class="text-white flex items-center justify-between p-3 md:hidden">
+        <h1 class="text-2xl font-bold">StreamVerse</h1>
+        <i
+          class="fa-solid fa-bars text-xl"
+          style="color: rgb(255, 255, 255)"
+          id="menuicon"
+        ></i>
+      </div>
+      <div
+        class="hidden text-white items-center justify-between border-b p-5 md:flex"
+      >
+        <h1 class="text-3xl font-bold">StreamVerse</h1>
+        <div class="flex text-xl gap-10">
+          <a class="cursor-pointer hover:underline">Home</a>
+          <a class="cursor-pointer hover:underline">Movies</a>
+          <a class="cursor-pointer hover:underline">Watchlist</a>
+        </div>
+        <div class="text-3xl flex gap-5">
+          <i class="fa-regular fa-bell" style="color: rgb(255, 255, 255)"></i>
+          <i
+            class="fa-solid fa-magnifying-glass"
+            style="color: rgb(255, 255, 255)"
+          ></i>
+          <i
+            class="fa-regular fa-circle-user"
+            style="color: rgb(255, 255, 255)"
+          ></i>
+        </div>
+      </div>
+    </section>
+    <!--Menu Bar Section-->
+    <section>
+      <div
+        id="menubar"
+        class="flex flex-col text-xl gap-5 text-white text-center bg-black top-0 fixed transition-all duration-500"
+        style="width: 50%; height: 100vh; right: -50%"
+      >
+        <i
+          id="closebtn"
+          class="fa-solid fa-xmark p-3"
+          style="color: rgb(255, 255, 255)"
+        ></i>
+        <a class="cursor-pointer mt-10 hover:underline">Home</a>
+        <a class="cursor-pointer hover:underline">Movies</a>
+        <a class="cursor-pointer hover:underline">Watchlist</a>
+      </div>
+    </section>
+    <!--Watchlist Section-->
+    <section class="p-3">
+      <h1 class="text-white text-2xl font-bold md:text-3xl">Watchlist</h1>
+      <p class="text-gray-400 md:text-xl">Start adding movies to keep track of what you want to watch.</p>
+      <div class="flex items-center gap-2 justify-center h-[70vh] md:text-xl">
+        <i class="fa-solid fa-clapperboard" style="color: rgb(255, 255, 255);"></i>
+        <p class="text-gray-400">Your Watchlist Is Empty</p>
+      </div>
+    </section>
+    <script src="../JAVA SCRIPT/watchlist.js"></script>
+  </body>
+</html>
