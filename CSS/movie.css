@@ -1,0 +1,652 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: black;
+}
+
+.header {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(21, 20, 20);
+
+}
+
+.header__head {
+    color: rgb(228, 15, 15);
+}
+
+.main {
+    position: relative;
+}
+
+.main img {
+    position: relative;
+    width: 95%;
+    height: 450px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    object-fit: cover;
+    object-position: top;
+
+}
+
+#left {
+    z-index: 1;
+    position: absolute;
+    left: 1px;
+    top: 230px;
+    font-size: 80px;
+
+
+}
+
+#right {
+    position: absolute;
+    top: 230px;
+    right: 9px;
+    font-size: 80px;
+}
+
+.main__head {
+    width: 400px;
+    color: rgb(12, 11, 11);
+    position: absolute;
+    bottom: 350px;
+    font-weight: 900;
+    left: 90px;
+    font-size: 4.5rem;
+}
+
+.main__box {
+    position: absolute;
+}
+
+.main__btn {
+    position: absolute;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(192, 182, 182);
+    font-weight: 30px;
+    bottom: 100px;
+    left: 90px;
+    border: solid 1px black;
+    font-weight: 900;
+    font-size: 20px;
+    transition: 0.3s;
+
+
+}
+
+.main__btn:hover {
+    background-color: rgb(214, 45, 12);
+    transform: translateY(-8px);
+}
+
+.main__des {
+    position: absolute;
+    color: #09090a;
+    width: 300px;
+    font-size: 20px;
+    bottom: 200px;
+    left: 80px;
+}
+
+.th__cont{
+    position:relative;
+    overflow:hidden;
+}
+.thriller__head {
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    
+
+}
+
+.th {
+    display: flex;
+    gap:1px;
+    transition: 0.3s;
+}
+
+.th__box {
+    flex-shrink: 0;
+    margin: 20px;
+
+}
+
+.th__box img {
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+
+.th__box img:hover {
+    transform: scale(1.1);
+}
+
+.th__box__head {
+    text-align: center;
+}
+#leftT,#rightT{
+   position:absolute;
+    top:120px;
+    font-size:50px;
+    color:white;
+    z-index:100;
+    cursor:pointer;
+    
+}
+#leftT{
+    left: -10px;
+}
+#rightT{
+     right: -5px;
+}
+/*family movies
+*/.family__head{
+    color:white;
+    margin-left:20px;
+    margin-bottom:10px;
+}
+
+.family__cont{
+    position:relative;
+    overflow:hidden;
+}
+
+.family__movies{
+    display:flex;
+    gap:1px;
+    transition:0.3s;
+}
+
+.family__box{
+    flex-shrink:0;
+    margin:20px;
+}
+
+.family__box img{
+    width:180px;
+    height:250px;
+    object-fit:cover;
+    border-radius:30px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.family__box img:hover{
+    transform:scale(1.1);
+}
+
+.family__box h3{
+    color:white;
+    text-align:center;
+}
+
+#leftF,
+#rightF{
+    position:absolute;
+    top:120px;
+    font-size:50px;
+    color:white;
+    z-index:100;
+    cursor:pointer;
+}
+
+#leftF{
+    left:-10px;
+}
+
+#rightF{
+    right:-5px;
+}
+/* heartbeet row*/
+.love__head{
+    color:white;
+    margin-left:20px;
+    margin-bottom:10px;
+}
+
+.love__cont{
+    position:relative;
+    overflow:hidden;
+}
+
+.love__movies{
+    display:flex;
+    gap:1px;
+    transition:0.3s;
+}
+
+.love__box{
+    flex-shrink:0;
+    margin:20px;
+}
+
+.love__box img{
+    width:180px;
+    height:250px;
+    object-fit:cover;
+    border-radius:30px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.love__box img:hover{
+    transform:scale(1.1);
+}
+
+.love__box h3{
+    color:white;
+    text-align:center;
+}
+
+#leftL,
+#rightL{
+    position:absolute;
+    top:120px;
+    font-size:50px;
+    color:white;
+    z-index:100;
+    cursor:pointer;
+}
+
+#leftL{
+    left:-10px;
+}
+
+#rightL{
+    right:-5px;
+}
+
+/* entertaninment movies*/
+.enta__head{
+    color:white;
+    margin-left:20px;
+    margin-bottom:10px;
+}
+
+.enta__cont{
+    position:relative;
+    overflow:hidden;
+}
+
+.enta__movies{
+    display:flex;
+    gap:1px;
+    transition:0.3s;
+}
+
+.enta__box{
+    flex-shrink:0;
+    margin:20px;
+}
+
+.enta__box img{
+    width:180px;
+    height:250px;
+    object-fit:cover;
+    border-radius:30px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.enta__box img:hover{
+    transform:scale(1.1);
+}
+
+.enta__box h3{
+    color:white;
+    text-align:center;
+}
+
+#leftE,
+#rightE{
+    position:absolute;
+    top:120px;
+    font-size:50px;
+    color:white;
+    z-index:100;
+    cursor:pointer;
+}
+
+#leftE{
+    left:-10px;
+}
+
+#rightE{
+    right:-5px;
+}
+
+/*feel good movies*/
+.feel__head{
+    color:white;
+    margin-left:20px;
+    margin-bottom:10px;
+}
+
+.feel__cont{
+    position:relative;
+    overflow:hidden;
+}
+
+.feel__movies{
+    display:flex;
+    gap:1px;
+    transition:0.3s;
+}
+
+.feel__box{
+    flex-shrink:0;
+    margin:20px;
+}
+
+.feel__box img{
+    width:180px;
+    height:250px;
+    object-fit:cover;
+    border-radius:30px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.feel__box img:hover{
+    transform:scale(1.1);
+}
+
+.feel__box h3{
+    color:white;
+    text-align:center;
+}
+
+#leftG,
+#rightG{
+    position:absolute;
+    top:120px;
+    font-size:50px;
+    color:white;
+    z-index:100;
+    cursor:pointer;
+}
+
+#leftG{
+    left:-10px;
+}
+
+#rightG{
+    right:-5px;
+}
+/*horror movies*/
+.horror__head{
+    color:white;
+    margin-left:20px;
+    margin-bottom:10px;
+}
+
+.horror__cont{
+    position:relative;
+    overflow:hidden;
+}
+
+.horror__movies{
+    display:flex;
+    gap:1px;
+    transition:0.3s;
+}
+
+.horror__box{
+    flex-shrink:0;
+    margin:20px;
+}
+
+.horror__box img{
+    width:180px;
+    height:250px;
+    object-fit:cover;
+    border-radius:30px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.horror__box img:hover{
+    transform:scale(1.1);
+}
+
+.horror__box h3{
+    color:white;
+    text-align:center;
+}
+
+#leftH,
+#rightH{
+    position:absolute;
+    top:120px;
+    font-size:50px;
+    color:white;
+    z-index:100;
+    cursor:pointer;
+}
+
+#leftH{
+    left:-10px;
+}
+
+#rightH{
+    right:-5px;
+}
+
+/* TABLET RESPONSIVE */
+
+/* ==========================================
+   TABLET RESPONSIVE (max-width: 1024px)
+   ========================================== */
+@media screen and (max-width: 1024px){
+    /* Ensure rows don't stretch past the screen width */
+    .th, .family__movies, .love__movies, .enta__movies, .feel__movies, .horror__movies {
+        width: 100%;
+    }
+
+    .main img{
+        width:100%;
+        height:350px;
+        margin:20px 0;
+    }
+
+    .main__head{
+        font-size:3rem;
+        left:40px;
+        bottom:260px;
+    }
+
+    .main__des{
+        width:280px;
+        font-size:16px;
+        left:40px;
+        bottom:120px;
+    }
+
+    .main__btn{
+        left:40px;
+        bottom:40px;
+        width:160px;
+        margin-bottom: 10px;
+    }
+
+    .th__box img,
+    .family__box img,
+    .love__box img,
+    .enta__box img,
+    .feel__box img,
+    .horror__box img{
+        width:150px;
+        height:220px;
+    }
+
+    #leftT,#rightT,
+    #leftF,#rightF,
+    #leftL,#rightL,
+    #leftE,#rightE,
+    #leftG,#rightG,
+    #leftH,#rightH{
+        font-size:40px;
+        top:100px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE (max-width: 768px)
+   ========================================== */
+@media screen and (max-width: 768px){
+    /* Prevent containers from spilling over */
+    .th, .family__movies, .love__movies, .enta__movies, .feel__movies, .horror__movies {
+        width: 100%;
+    }
+
+    .header__head{
+        text-align:center;
+        font-size:1.5rem;
+    }
+
+    .main img{
+        width:100%;
+        height:250px;
+        margin:15px 0;
+    }
+
+    .main__head{
+        font-size:2rem;
+        width:180px;
+        left:15px;
+        bottom:180px;
+    }
+
+    .main__des{
+        width:200px;
+        font-size:12px;
+        left:15px;
+        bottom:70px;
+    }
+
+    .main__btn{
+        width:120px;
+        font-size:14px;
+        left:15px;
+        bottom:15px;
+        padding:8px;
+    }
+
+    #left,
+    #right{
+        font-size:35px;
+        top:110px;
+    }
+
+    .thriller__head,
+    .family__head,
+    .love__head,
+    .enta__head,
+    .feel__head,
+    .horror__head{
+        font-size:20px;
+        margin-left:10px;
+    }
+
+    .th__box img,
+    .family__box img,
+    .love__box img,
+    .enta__box img,
+    .feel__box img,
+    .horror__box img{
+        width:120px;
+        height:180px;
+    }
+
+    .th__box,
+    .family__box,
+    .love__box,
+    .enta__box,
+    .feel__box,
+    .horror__box{
+        margin:10px;
+    }
+
+    .th__box h3,
+    .family__box h3,
+    .love__box h3,
+    .enta__box h3,
+    .feel__box h3,
+    .horror__box h3{
+        font-size:12px;
+    }
+
+    #leftT,#rightT,
+    #leftF,#rightF,
+    #leftL,#rightL,
+    #leftE,#rightE,
+    #leftG,#rightG,
+    #leftH,#rightH{
+        font-size:28px;
+        top:80px;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE (max-width: 480px)
+   ========================================== */
+@media screen and (max-width: 480px){
+    .main img{
+        height:220px;
+    }
+
+    .main__head{
+        font-size:1.5rem;
+        bottom:150px;
+    }
+
+    .main__des{
+        display:none;
+    }
+
+    .main__btn{
+        width:100px;
+        font-size:12px;
+    }
+
+    .th__box img,
+    .family__box img,
+    .love__box img,
+    .enta__box img,
+    .feel__box img,
+    .horror__box img{
+        width:100px;
+        height:150px;
+    }
+
+    .th__box h3,
+    .family__box h3,
+    .love__box h3,
+    .enta__box h3,
+    .feel__box h3,
+    .horror__box h3{
+        font-size:10px;
+    }
+}
