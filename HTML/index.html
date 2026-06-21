@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreamVerse</title>
+    <!--Tailwindcss CDN link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Font Awesome CDN link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--Google font family link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!--CSS-->
+    <link href="../CSS/index.css" rel="stylesheet">
+  </head>
+  <body class="bg-[#0F172A]" style="font-family: &quot;Inter&quot; sans-serif">
+    <!--Header Section-->
+    <section class="sticky top-0 z-10 bg-[#0F172A]">
+      <div class="text-white flex items-center justify-between p-3 md:hidden">
+        <h1 class="text-2xl font-bold">StreamVerse</h1>
+        <i
+          class="fa-solid fa-bars text-xl"
+          style="color: rgb(255, 255, 255)"
+          id="menuicon"
+        ></i>
+      </div>
+      <div
+        class="hidden text-white items-center justify-between border-b p-5 md:flex"
+      >
+        <h1 class="text-3xl font-bold">StreamVerse</h1>
+        <div class="flex text-xl gap-10">
+          <a class="cursor-pointer hover:underline">Home</a>
+          <a class="cursor-pointer hover:underline">Movies</a>
+          <a class="cursor-pointer hover:underline">Watchlist</a>
+        </div>
+        <div class="text-3xl flex gap-5">
+          <i class="fa-regular fa-bell" style="color: rgb(255, 255, 255)"></i>
+          <i
+            class="fa-solid fa-magnifying-glass"
+            style="color: rgb(255, 255, 255)"
+          ></i>
+          <i
+            class="fa-regular fa-circle-user"
+            style="color: rgb(255, 255, 255)"
+          ></i>
+        </div>
+      </div>
+    </section>
+    <!--Menu Bar Section-->
+    <section>
+      <div
+        id="menubar"
+        class="flex flex-col text-xl gap-5 text-white text-center bg-black top-0 fixed transition-all duration-500 z-20"
+        style="width: 50%; height: 100vh; right: -50%"
+      >
+        <i
+          id="closebtn"
+          class="fa-solid fa-xmark p-3"
+          style="color: rgb(255, 255, 255)"
+        ></i>
+        <a class="cursor-pointer mt-10 hover:underline">Home</a>
+        <a class="cursor-pointer hover:underline">Movies</a>
+        <a class="cursor-pointer hover:underline">Watchlist</a>
+      </div>
+    </section>
+    <!--Header Movie Section-->
+    <section>
+      <div class="relative">
+        <img
+          src="../Images/Oppenheimer.jpg"
+          alt="Oppenheimer"
+          class="w-full md:h-[500px] object-cover"
+        />
+        <div
+          class="absolute inset-0 w-2/3 bg-gradient-to-r from-[#0F172A] via-[#0F172A]/80 to-transparent p-3 flex flex-col gap-2"
+        >
+          <h1 class="text-white font-bold text-2xl mt-3 md:text-6xl md:mt-20">
+            Oppenheimer
+          </h1>
+          <p class="text-white text-xs md:text-4xl">9.5/10 ⭐</p>
+          <p class="text-white text-xs md:text-3xl">Action | Mystery | Si-Fi</p>
+          <p class="text-gray-500 text-xs w-[75%] md:text-2xl">
+            The film follows theoretical physicist J. Robert Oppenheimer as he
+            leads the Manhattan Project to develop the first atomic bomb during
+            World War II. After the successful and devastating deployment of his
+            creation, he grapples with the catastrophic global consequences.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--Time Based Discovery Section-->
+    <section class="p-3 md:p-5">
+      <h1 class="text-white text-xl font-bold md:text-4xl">
+        How much time do you have?
+      </h1>
+      <p class="text-gray-500 text-xs md:text-2xl">
+        Curated picks that fits perfectly in your schedule
+      </p>
+      <div class="grid grid-cols-4 gap-3 mt-3">
+        <div class="text-white bg-gray-700 p-3 rounded-xl">
+          <p class="text-3xl">⚡</p>
+          <p class="md:text-xl font-bold">15 Mins</p>
+          <p class="text-xs md:text-2xl">Quick fix</p>
+        </div>
+        <div class="text-white bg-gray-700 p-3 rounded-xl">
+          <p class="text-3xl">☕</p>
+          <p class="md:text-xl font-bold">30 Mins</p>
+          <p class="text-xs md:text-2xl">Short Episode</p>
+        </div>
+        <div class="text-white bg-gray-700 p-3 rounded-xl">
+          <p class="text-3xl">🎞️</p>
+          <p class="md:text-xl font-bold">1 Hour</p>
+          <p class="text-xs md:text-2xl">Future flim</p>
+        </div>
+        <div class="text-white bg-gray-700 p-3 rounded-xl">
+          <p class="text-3xl">🛏️</p>
+          <p class="md:text-xl font-bold">Binge</p>
+          <p class="text-xs md:text-2xl">No limits</p>
+        </div>
+      </div>
+    </section>
+    <!--Trending Now Section-->
+    <section class="p-3 md:p-5">
+      <h1 class="text-white text-xl font-bold">Trending Now</h1>
+      <p class="text-gray-500 text-xs">What everyone watching this week</p>
+      <div id="movie-container" class="flex gap-4 overflow-x-auto mt-3 no-scrollbar">
+      </div>
+    </section>
+    <script src="../JAVA SCRIPT/Index.js"></script>
+    <script src="../JAVA SCRIPT/watchlist.js"></script>
+  </body>
+</html>
